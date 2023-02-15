@@ -1,0 +1,33 @@
+/* Three main ways to bring fonts into projects
+1.) Using a system font with a stack (something users already have installed in their devices) *PREFERRED METHOD in terms of speed and performance*
+2.) Using online font libraries (Google, Adobe) [Google is preferred, Adobe has some issues]
+Fonts take the longest to load than a full size page video.
+Google has done things to improve performance, Adobe has not
+3.) Using a custom font by hosting and linking to a WOFF file*/
+@font-face {
+    font-family: 'typewriter';
+    src: url('../fonts/veteran_typewriter_regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /*This is important to use as it gets rid of the flash of invisible text! */
+}
+
+body {
+    /* font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;  */
+    font-family: 'typewriter', 'Courier New', monospace;
+    background-color: #dedcda;
+    color: #3b373f;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Beth Ellen', cursive;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
